@@ -1,0 +1,21 @@
+<section class="todolist">
+  
+<h1>TODO List</h1>
+<p>A place to store the things you have to do!</p>
+<input type="text" placeholder="Filter your todos">
+<section class="main-area">
+
+<ul class="todo-items" *ngFor="let todo of todoList; index as i" >
+  <li><span>{{ i + 1 }}. </span><button class="complete"  *ngIf="!todo.completed">Complete</button> 
+   <span  [ngClass]="!todo.completed ? 'false' : 'strikethrough'" >{{ todo.task}} </span> <img src="assets/clear.png" alt=""></li>
+</ul>
+
+<input type="text" placeholder="Add your todo">
+
+  <button class="add">Add</button>
+
+
+
+</section>
+
+</section>
